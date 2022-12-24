@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../core/services/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private theme: ThemeService) {}
 
+
+
+  enableDark(){
+    this.theme.enableDark();
+  }
+  enableLight(){
+    this.theme.enableLight();
+  }
+
+  onToggleColorTheme(event: any){
+    console.log(event.detail.checked);
+  }
 }

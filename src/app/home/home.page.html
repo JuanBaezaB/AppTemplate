@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
     <ion-title>
       Blank
@@ -14,7 +14,25 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card >
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
   </div>
+
+  <ion-button (click)="enableDark()">
+    dark mode
+  </ion-button>
+
+  <ion-button (click)="enableLight()">
+    dark light
+  </ion-button>
+
+  <ion-toggle (ionChange)="onToggleColorTheme($event)"></ion-toggle>
 </ion-content>
