@@ -8,7 +8,9 @@ import { ThemeService } from '../core/services/theme.service';
 })
 export class HomePage {
 
-  constructor(private theme: ThemeService) {}
+  constructor(private theme: ThemeService) {
+
+  }
 
 
 
